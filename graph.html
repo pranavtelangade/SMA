@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_csv("file.csv")
+
+#scatter plot
+plt.scatter(data['column name1'], data['column name2'])
+plt.title("Plot title")
+plt.xlabel('column name1')
+plt.ylabel('column name2')
+plt.show()
+
+#line plot
+plt.plot(data['column name'])
+plt.title("Plot title")
+plt.xlabel('column name1')
+plt.ylabel('column name2')
+plt.show()
+
+#bar chart
+plt.bar(data['column name1'], data['column name2'])
+plt.title("Plot title")
+plt.xlabel('column name1')
+plt.ylabel('column name2')
+plt.show()

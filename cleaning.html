@@ -1,0 +1,16 @@
+import pandas as pd
+df = pd.read_csv('file.csv') //read csv file
+df.head()
+
+df = df.rename(columns = {'column name':'to column name', 'column name':'to column name'}) //rename columns
+df.head()
+
+df['column name'].fillna(paid, inplace = True) //replace NaN values with data
+df['column name'] = df['column name'].str.replace(r'\D','') //keep only integers in the column data
+for x in df.index:
+	if df.loc[x, "column name"] == 'string old': df.loc[x,"column name" = 'string new' //change string data
+df.head() //display table
+
+df.dtypes //display types of data
+
+df['column name'] = df['column name'].astype('int') //change type to int from string

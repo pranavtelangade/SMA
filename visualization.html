@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+from random import randint
+data = pd.read_csv("file.csv")
+
+fig, ax = plt.subplots(figsize= (15,9))
+ax.axis("off")
+plot_options = {"node_size": 10, "with_labels": False, "width":0.15}
+nx.draw_netrworkx(G, pos = nx.random_layout(G), ax=ax, **plot_options)
+
+pos = nx.spring_layout(G, iterations = 15, seed=1721)
+fig, ax = plt.subplots(figsize= (15,9))
+ax.axis("off")
+nx.draw_netrworkx(G, pos = nx.random_layout(G), ax=ax, **plot_options)
